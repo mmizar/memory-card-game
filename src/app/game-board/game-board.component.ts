@@ -23,7 +23,7 @@ export class GameBoardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.memoryGameService.saveDeck(this.cards);
+      this.memoryGameService.saveDeck(this.isWin ? this.memoryGameService.getNewCardDeck() : this.cards);
   }
 
   public disableBoard(): void {
