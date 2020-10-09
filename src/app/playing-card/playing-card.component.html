@@ -1,0 +1,11 @@
+<div class="card" [class.removed]="card?.removed">
+    <div class="card-contents" [class.flipped]="!card?.isFaceUp" (click)="flip()" (transitionend)="emitFlip()">
+        <div class="card-face card-contents-front">
+            <img [src]="imagePath">
+            <p>{{card?.value}}</p>
+        </div>
+        <div class="card-face card-contents-back">
+            <p>???</p>
+        </div>
+    </div>
+</div>

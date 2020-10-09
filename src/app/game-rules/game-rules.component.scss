@@ -1,0 +1,32 @@
+@import '../../styles.scss';
+
+:host {
+    .rules-card {
+        width: 80%;
+        margin: 120px auto 0 auto;
+        background-color: $color-purple-light;
+        border: 2px dashed $color-purple-dark;
+        align-items: center;
+        padding: 15px;
+        text-align: center;
+
+        ul {           
+            padding-inline-start: 0px;
+            margin: auto;
+            
+            li {
+                margin: 15px;
+                color: $color-purple-dark;
+                font-weight: 600;
+                font-size: 16px;
+                list-style: none;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .rules-card {
+            width: 700px;
+        }       
+    }
+}

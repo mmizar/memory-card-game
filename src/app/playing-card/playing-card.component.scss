@@ -1,0 +1,63 @@
+@import '../../styles.scss';
+
+:host {
+    .card {
+        width: 90%;
+        height: 13vh;
+        perspective: 600px;
+        margin: 10px;
+    }
+
+    .card-contents {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    
+        &.flipped {
+            transform: rotateY(180deg);
+        }
+    }
+
+    .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }   
+
+    .card-contents-front {
+        margin: auto;
+        background: $color-maroon;
+        color: white;  
+        border: 2px solid white;
+      }
+      
+    .card-contents-back {
+        background: $color-pink-light;
+        border: 2px solid $color-pink-dark;
+        color: $color-pink-dark;
+        transform: rotateY(180deg);
+    }
+
+    .removed {
+        visibility: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (min-width: 1200px) {
+        .card {
+            height: 20vh;
+        }
+    }
+}

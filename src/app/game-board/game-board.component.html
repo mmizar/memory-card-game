@@ -1,0 +1,13 @@
+<div class="grid" *ngIf="!isWin; else wonGame">
+    <ng-container *ngFor="let card of cards">
+        <app-playing-card [card]="card" [readOnly]="readOnly" (flipped)="flip($event)" (disabled)="disableBoard()">
+        </app-playing-card>
+    </ng-container>
+</div>
+<ng-template #wonGame>
+    <div class="winner">
+        <h1>Congratulations! You won!</h1>
+        <img src="assets\images\confetti.gif">
+        <button (click)=resetGameBoard()>Reset</button>
+    </div>
+</ng-template>

@@ -1,0 +1,36 @@
+@import '../../styles.scss';
+
+:host {
+    .grid {
+        display: grid;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .winner {
+        width: 400px;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    button {
+        background-color: $color-purple-dark;
+        color: white;
+        font-size: 14px;
+        padding: 10px;
+        width: 100px;
+        border: none;
+        font-weight: 600;
+    }
+
+    @media (min-width: 1200px) {
+        .grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+}
