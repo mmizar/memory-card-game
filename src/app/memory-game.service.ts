@@ -10,6 +10,8 @@ export class MemoryGameService {
   public readonly NUMBER_OF_ROWS = 4;
   public readonly NUMBER_OF_COLUMNS = 6;
 
+  public savedDeck: PlayingCard[];
+
   constructor() { }
 
   public getNewCardDeck(): PlayingCard[] {
@@ -46,6 +48,10 @@ export class MemoryGameService {
 
   public checkWin(cards: PlayingCard[]): boolean {
     return !cards.some((card: PlayingCard) => !card.removed);
+  }
+
+  public saveDeck(cards: PlayingCard[]): void {
+    this.savedDeck = cards;
   }
 
   private isMatch(cards: PlayingCard[], value: string): boolean {

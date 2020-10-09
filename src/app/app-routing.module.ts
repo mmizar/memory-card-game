@@ -5,6 +5,7 @@ import { GameRulesComponent } from './game-rules/game-rules.component';
 import { InfoAboutComponent } from './info-about/info-about.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/game-board', pathMatch: 'full'}, // Default navigation to game board
   { path: 'game-board', component: GameBoardComponent },
   { path: 'info-about', component: InfoAboutComponent },
   { path: 'game-rules', component: GameRulesComponent },
